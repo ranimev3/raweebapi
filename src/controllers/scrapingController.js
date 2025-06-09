@@ -3,7 +3,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://komikstation.co/";
+    const url = "https://komikstation.org/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -100,7 +100,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://komikstation.co/manga/?type=manhwa&order=popular";
+    const url = "https://komikstation.org/manga/?type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
@@ -134,8 +134,8 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://komikstation.co/manga/?page=2&type=manhwa&order=popular",
-      "https://komikstation.co/manga/?page=3&type=manhwa&order=popular",
+      "https://komikstation.org/manga/?page=2&type=manhwa&order=popular",
+      "https://komikstation.org/manga/?page=3&type=manhwa&order=popular",
     ];
 
     const allResults = [];
@@ -171,7 +171,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://komikstation.co/";
+    const url = "https://komikstation.org/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -220,7 +220,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://komikstation.co/";
+  const url = "https://komikstation.org/";
 
   try {
     const html = await fetchPage(url);
@@ -254,7 +254,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://komikstation.co/manga/list-mode/";
+    const url = "https://komikstation.org/manga/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -278,7 +278,7 @@ export const getGenres = async (req, res) => {
 
 export const getGenreId = async (req, res) => {
   const { genreId } = req.params;
-  const url = `https://komikstation.co/genres/${genreId}`;
+  const url = `https://komikstation.org/genres/${genreId}`;
 
   try {
     const html = await fetchPage(url);
@@ -316,7 +316,7 @@ export const getGenreId = async (req, res) => {
 
 export const getGenreIdPage = async (req, res) => {
   const { genreId, pageNumber } = req.params;
-  const url = `https://komikstation.co/genres/${genreId}/page/${pageNumber}`;
+  const url = `https://komikstation.org/genres/${genreId}/page/${pageNumber}`;
 
   try {
     const html = await fetchPage(url);
@@ -356,7 +356,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://komikstation.co/?s=${searchId}`;
+  const url = `https://komikstation.org/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -394,7 +394,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://komikstation.co/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://komikstation.org/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -434,7 +434,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://komikstation.co/manga/${manhwaId}`;
+  const url = `https://komikstation.org/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -533,7 +533,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://komikstation.co/manga/?status=ongoing&type=manhwa&order=";
+    "https://komikstation.org/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -567,7 +567,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://komikstation.co/${chapterId}`;
+  const url = `https://komikstation.org/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
@@ -624,7 +624,7 @@ export const getChapter = async (req, res) => {
 };
 
 export const getList = async (req, res) => {
-  const url = "https://komikstation.co/manga/list-mode/";
+  const url = "https://komikstation.org/manga/list-mode/";
 
   try {
     const html = await fetchPage(url);
