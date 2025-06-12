@@ -16,8 +16,8 @@ const headers = {
   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
   "Accept-Encoding": "gzip, deflate, br",
   "Accept-Language": "en-US,en;q=0.9,id;q=0.8",
-  "Referer": "https://komikstation.org/",
-  "Origin": "https://komikstation.org",
+  "Referer": "https://natsu.id/",
+  "Origin": "https://natsu.id",
   "X-Requested-With": "XMLHttpRequest",  
   "Upgrade-Insecure-Requests": "1",  
 };
