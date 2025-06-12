@@ -278,7 +278,7 @@ export const getGenres = async (req, res) => {
 
 export const getGenreId = async (req, res) => {
   const { genreId } = req.params;
-  const url = `https://komikstation.org/genres/${genreId}`;
+  const url = `https://natsu.id/genres/${genreId}`;
 
   try {
     const html = await fetchPage(url);
