@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import routesv2 from './routesv2/router.js');
 import apiRoutes from './routes/apiRoutes.js';
-import routesv2 from './routesv2/router.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 app.use('/api', apiRoutes);
-app.use('/apiv2/Bacakomik', routerv2);
+app.use('/api/bacakomik', routesv2);
 
 
 app.listen(PORT, () => {
