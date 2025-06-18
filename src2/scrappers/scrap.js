@@ -1,5 +1,5 @@
 import { load } from "cheerio"
-import { fetchPage } from "../controllers/service.js"
+import { fetchPage } from "../controllersv2/service.js"
 
 export const scrapeLatest = async (req, res) => {
     try {
