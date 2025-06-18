@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import Bacakomik from './routesv2/router.js');
+import Bacakomik from './routesv2/router.js';
 import apiRoutes from './routes/apiRoutes.js';
 
 const app = express();
