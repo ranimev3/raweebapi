@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 app.use('/api', apiRoutes);
-app.use('/api/Bacakomik', router);
+app.use('/api/bacakomik', router);
 
 
 app.listen(PORT, () => {
