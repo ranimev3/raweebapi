@@ -1,9 +1,10 @@
 ![Preview](panel.webp)
-# Kurokami API
+# Raweeb API
 Rest API Manhwa Bahasa Indonesia
 
 ## Source
-https://komikstation.co/
+https://id.manhwaindo.cx/
+https://bacakomik.my/
 
 ## Fitur
 
