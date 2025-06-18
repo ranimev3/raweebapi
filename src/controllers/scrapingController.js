@@ -100,7 +100,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://id.manhwaindo.cx/manga/?type=manhwa&order=popular";
+    const url = "https://id.manhwaindo.cx/series/?status=&type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
@@ -134,8 +134,8 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://id.manhwaindo.cx/manga/?page=2&type=manhwa&order=popular",
-      "https://id.manhwaindo.cx/manga/?page=3&type=manhwa&order=popular",
+      "https://id.manhwaindo.cx/series/?page=2&type=manhwa&order=popular",
+      "https://id.manhwaindo.cx/series/?page=3&type=manhwa&order=popular",
     ];
 
     const allResults = [];
@@ -254,7 +254,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://id.manhwaindo.cx/manga/list-mode/";
+    const url = "https://id.manhwaindo.cx/series/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -434,7 +434,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://id.manhwaindo.cx/manga/${manhwaId}`;
+  const url = `https://id.manhwaindo.cx/series/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -533,7 +533,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://id.manhwaindo.cx/manga/?status=ongoing&type=manhwa&order=";
+    "https://id.manhwaindo.cx/series/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -624,7 +624,7 @@ export const getChapter = async (req, res) => {
 };
 
 export const getList = async (req, res) => {
-  const url = "https://id.manhwaindo.cx/manga/list-mode/";
+  const url = "https://id.manhwaindo.cx/series/list-mode/";
 
   try {
     const html = await fetchPage(url);
