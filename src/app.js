@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import Bacakomik from './routesv2/router.js';
+import routesv2 from './routesv2/router.js';
 import apiRoutes from './routes/apiRoutes.js';
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 app.use('/api', apiRoutes);
-app.use('/api/bacakomik', Bacakomik);
+app.use('/api/bacakomik', routesv2);
 
 
 app.listen(PORT, () => {
