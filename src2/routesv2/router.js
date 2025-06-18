@@ -17,11 +17,11 @@ import {
 
 const router = express.Router()
 
-router.get("/latest", scrapeLatest)
-router.get("/latest/page/:page", scrapeLatest)
-router.get("/populer", scrapePopuler)
-router.get("/populer/page/:page", scrapePopuler)
-router.get("/only/:type", scrapeOnly)
+router.get("/home", scrapeLatest)
+router.get("/manhwa-popular", scrapeLatest)
+router.get("/manhwa-recommendation", scrapePopuler)
+router.get("/manhwa-new", scrapePopuler)
+router.get("/manhwa-top", scrapeOnly)
 router.get("/only/:type/page/:page", scrapeOnly)
 router.get("/recomen", scrapeRecomen)
 router.get("/top", scrapeTop)
