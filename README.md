@@ -3,8 +3,11 @@
 Rest API Manhwa Bahasa Indonesia
 
 ## Source
-https://id.manhwaindo.cx/
+https://manhwaindo.com/
 https://bacakomik.my/
+
+## LN source
+https://bacalightnovel.co/
 
 ## Fitur
 
