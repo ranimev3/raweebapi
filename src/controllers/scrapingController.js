@@ -440,7 +440,7 @@ export const getManhwaDetail = async (req, res) => {
     const html = await fetchPage(url);
     const $ = load(html);
 
-    const title = $(".infox .entry-title").text().trim();
+    const title = $(".infox .tt").text().trim();
     const alternative = $(".wd-full span").text().trim();
     const imageSrc = $(".thumb img").attr("src");
     const rating = $(".rating .num").text().trim();
