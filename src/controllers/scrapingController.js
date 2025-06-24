@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://bacakomik.my/";
+    const url = "https://kiryuu02.com/";
     const html = await fetchPage(url);
     const $ = load(html);
 
