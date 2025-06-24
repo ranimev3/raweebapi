@@ -40,7 +40,7 @@ export const getHome = async (req, res) => {
     $(".serieslist.pop.wpop ul li").each((index, element) => {
       const title = $(element).find(".leftseries h2 a").text().trim();
       const link = $(element).find(".leftseries h2 a").attr("href");
-      const imageSrc = $(element).find(".imgseries img").attr("src");
+      const imageSrc = $(element).find(".imgu img").attr("src");
       const rating = $(element).find(".numscore").text().trim();
       const genres = [];
 
@@ -112,7 +112,7 @@ export const getManhwaPopular = async (req, res) => {
       const title = $(element).find(".tt").text().trim();
       const chapter = $(element).find(".epxs").text().trim();
       const rating = $(element).find(".numscore").text().trim();
-      const imageSrc = $(element).find("img").attr("src");
+      const imageSrc = $(element).find(".imgu img").attr("src");
       const link = $(element).find("a").attr("href");
 
       results.push({
