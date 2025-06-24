@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/";
+    const url = "https://natsu.id/manga/?status=ongoing&type=manhua&order=update";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -433,7 +433,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://kiryuu02.com/manga/${manhwaId}`;
+  const url = `https://natsu.id/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
