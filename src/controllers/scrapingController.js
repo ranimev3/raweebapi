@@ -3,7 +3,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://01.komiku.asia/";
+    const url = "https://natsu.id/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -98,7 +98,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://01.komiku.asia/manga/?status=&type=manhwa&order=popular";
+    const url = "https://natsu.id/manga/?status=&type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
