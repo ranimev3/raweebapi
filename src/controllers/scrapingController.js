@@ -132,7 +132,8 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://komikstation.org/manga/?page=2&type=manhwa&order=popular",
+      "https://natsu.id/manga/?page=2&type=manhwa&order=popular",
+      "https://natsu.id/manga/?page=1&type=manga&order=popular",
       "https://natsu.id/manga/?page=3&type=manhua&order=popular",
     ];
 
@@ -169,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://manhwaindo.com/";
+    const url = "https://natsu.id/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -218,7 +219,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://komikstation.org/";
+  const url = "https://natsu.id/";
 
   try {
     const html = await fetchPage(url);
@@ -252,7 +253,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://komikstation.org/manga/list-mode/";
+    const url = "https://natsu.id/manga/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -354,7 +355,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://komikstation.org/?s=${searchId}`;
+  const url = `https://natsu.id/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
