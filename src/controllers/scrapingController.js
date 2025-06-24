@@ -40,7 +40,7 @@ export const getHome = async (req, res) => {
     $(".serieslist.pop.wpop ul li").each((index, element) => {
       const title = $(element).find(".leftseries h2 a").text().trim();
       const link = $(element).find(".leftseries h2 a").attr("href");
-      const imageSrc = $(element).find(".imgu img").attr("src");
+      const imageSrc = $(element).find(".imgseries img").attr("src");
       const rating = $(element).find(".numscore").text().trim();
       const genres = [];
 
@@ -100,7 +100,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://komikstation.org/manga/?status=&type=manhwa&order=popular";
+    const url = "https://manhwaindo.com/series/?status=&type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
@@ -112,7 +112,7 @@ export const getManhwaPopular = async (req, res) => {
       const title = $(element).find(".tt").text().trim();
       const chapter = $(element).find(".epxs").text().trim();
       const rating = $(element).find(".numscore").text().trim();
-      const imageSrc = $(element).find(".imgu img").attr("src");
+      const imageSrc = $(element).find("img").attr("src");
       const link = $(element).find("a").attr("href");
 
       results.push({
@@ -134,8 +134,8 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://komikstation.org/manga/?page=2&type=manhwa&order=popular",
-      "https://komikstation.org/manga/?page=3&type=manhwa&order=popular",
+      "https://manhwaindo.com/series/?page=2&type=manhwa&order=popular",
+      "https://manhwaindo.com/series/?page=3&type=manhwa&order=popular",
     ];
 
     const allResults = [];
@@ -171,7 +171,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://komikstation.org/";
+    const url = "https://manhwaindo.com/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -434,7 +434,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://komikstation.org/manga/${manhwaId}`;
+  const url = `https://manhwaindo.com/series/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -533,7 +533,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://komikstation.org/manga/?status=ongoing&type=manhwa&order=";
+    "https://manhwaindo.com/series/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -567,7 +567,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://komikstation.org/${chapterId}`;
+  const url = `https://manhwaindo.com/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
@@ -624,7 +624,7 @@ export const getChapter = async (req, res) => {
 };
 
 export const getList = async (req, res) => {
-  const url = "https://komikstation.org/manga/list-mode/";
+  const url = "https://manhwaindo.com/series/list-mode/";
 
   try {
     const html = await fetchPage(url);
