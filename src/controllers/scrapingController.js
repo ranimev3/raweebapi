@@ -3,7 +3,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://komikstation.org/";
+    const url = "https://01.komiku.asia/";
     const html = await fetchPage(url);
     const $ = load(html);
 
