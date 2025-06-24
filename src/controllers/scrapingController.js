@@ -132,8 +132,8 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://01.komiku.asia/manga/?page=2&type=manhwa&order=popular",
-      "https://01.komiku.asia/manga/?page=3&type=manhwa&order=popular",
+      "https://komikstation.org/manga/?page=2&type=manhwa&order=popular",
+      "https://natsu.id/manga/?page=3&type=manhua&order=popular",
     ];
 
     const allResults = [];
@@ -169,7 +169,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://01.komiku.asia/";
+    const url = "https://manhwaindo.com/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -218,7 +218,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://01.komiku.asia/";
+  const url = "https://komikstation.org/";
 
   try {
     const html = await fetchPage(url);
@@ -252,7 +252,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://01.komiku.asia/manga/list-mode/";
+    const url = "https://komikstation.org/manga/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -276,7 +276,7 @@ export const getGenres = async (req, res) => {
 
 export const getGenreId = async (req, res) => {
   const { genreId } = req.params;
-  const url = `https://01.komiku.asia/genres/${genreId}`;
+  const url = `https://natsu.id/genres/${genreId}`;
 
   try {
     const html = await fetchPage(url);
@@ -314,7 +314,7 @@ export const getGenreId = async (req, res) => {
 
 export const getGenreIdPage = async (req, res) => {
   const { genreId, pageNumber } = req.params;
-  const url = `https://01.komiku.asia/genres/${genreId}/page/${pageNumber}`;
+  const url = `https://natsu.id/genres/${genreId}/page/${pageNumber}`;
 
   try {
     const html = await fetchPage(url);
@@ -354,7 +354,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://01.komiku.asia/?s=${searchId}`;
+  const url = `https://komikstation.org/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -392,7 +392,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://01.komiku.asia/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://natsu.id/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -531,7 +531,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://01.komiku.asia/manga/?status=ongoing&type=manhwa&order=";
+    "https://natsu.id/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -565,7 +565,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://komikstation.org/${chapterId}`;
+  const url = `https://natsu.id/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
