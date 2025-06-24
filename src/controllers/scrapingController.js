@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://bacalightnovel.co/";
+    const url = "https://manhwaland.baby/";
     const html = await fetchPage(url);
     const $ = load(html);
 
