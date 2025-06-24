@@ -16,8 +16,8 @@ const headers = {
   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
   "Accept-Encoding": "gzip, deflate, br",
   "Accept-Language": "en-US,en;q=0.9,id;q=0.8",
-  "Referer": "https://manhwaindo.com/",
-  "Origin": "https://manhwaindo.com",
+  "Referer": "https://komikstation.org/",
+  "Origin": "https://komikstation.org",
   "X-Requested-With": "XMLHttpRequest",  
   "Upgrade-Insecure-Requests": "1",  
 };
