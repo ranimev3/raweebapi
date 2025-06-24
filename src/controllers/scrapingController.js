@@ -100,7 +100,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://manhwaindo.com/series/?status=&type=manhwa&order=popular";
+    const url = "https://01.komiku.asia/manga/?status=&type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
@@ -134,8 +134,8 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://manhwaindo.com/series/?page=2&type=manhwa&order=popular",
-      "https://manhwaindo.com/series/?page=3&type=manhwa&order=popular",
+      "https://01.komiku.asia/manga/?page=2&type=manhwa&order=popular",
+      "https://01.komiku.asia/manga/?page=3&type=manhwa&order=popular",
     ];
 
     const allResults = [];
@@ -171,7 +171,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://manhwaindo.com/";
+    const url = "https://01.komiku.asia/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -220,7 +220,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://manhwaindo.com/";
+  const url = "https://01.komiku.asia/";
 
   try {
     const html = await fetchPage(url);
@@ -254,7 +254,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://manhwaindo.com/series/list-mode/";
+    const url = "https://01.komiku.asia/manga/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -278,7 +278,7 @@ export const getGenres = async (req, res) => {
 
 export const getGenreId = async (req, res) => {
   const { genreId } = req.params;
-  const url = `https://manhwaindo.com/genres/${genreId}`;
+  const url = `https://01.komiku.asia/genres/${genreId}`;
 
   try {
     const html = await fetchPage(url);
@@ -316,7 +316,7 @@ export const getGenreId = async (req, res) => {
 
 export const getGenreIdPage = async (req, res) => {
   const { genreId, pageNumber } = req.params;
-  const url = `https://manhwaindo.com/genres/${genreId}/page/${pageNumber}`;
+  const url = `https://01.komiku.asia/genres/${genreId}/page/${pageNumber}`;
 
   try {
     const html = await fetchPage(url);
@@ -356,7 +356,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://manhwaindo.com/?s=${searchId}`;
+  const url = `https://01.komiku.asia/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -394,7 +394,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://manhwaindo.com/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://01.komiku.asia/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -434,13 +434,13 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://manhwaindo.com/series/${manhwaId}`;
+  const url = `https://01.komiku.asia/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
     const $ = load(html);
 
-    const title = $(".infox .tt").text().trim();
+    const title = $(".infox .title").text().trim();
     const alternative = $(".wd-full span").text().trim();
     const imageSrc = $(".thumb img").attr("src");
     const rating = $(".rating .num").text().trim();
@@ -533,7 +533,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://manhwaindo.com/series/?status=ongoing&type=manhwa&order=";
+    "https://01.komiku.asia/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -567,7 +567,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://manhwaindo.com/${chapterId}`;
+  const url = `https://01.komiku.asia/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
@@ -624,7 +624,7 @@ export const getChapter = async (req, res) => {
 };
 
 export const getList = async (req, res) => {
-  const url = "https://manhwaindo.com/series/list-mode/";
+  const url = "https://01.komiku.asia/manga/list-mode/";
 
   try {
     const html = await fetchPage(url);
