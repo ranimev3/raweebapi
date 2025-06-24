@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://manhwaland.baby/";
+    const url = "https://mangasusuku.com/";
     const html = await fetchPage(url);
     const $ = load(html);
 
