@@ -433,7 +433,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://natsu.id/manga/${manhwaId}`;
+  const url = `https://kiryuu02.com/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
