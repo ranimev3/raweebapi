@@ -15,8 +15,7 @@ export const getHome = async (req, res) => {
       const chapters = [];
 
       $(element)
-        .find(".luf ul li")
-        .each((i, el) => {
+        .find(".luf ul li").each((i, el) => {
           const chapterLink = $(el).find("a").attr("href");
           const chapterTitle = $(el).find("a").text().trim();
           const timeAgo = $(el).find("span").text().trim();
@@ -45,8 +44,7 @@ export const getHome = async (req, res) => {
       const genres = [];
 
       $(element)
-        .find(".leftseries span a")
-        .each((i, el) => {
+        .find(".leftseries span a").each((i, el) => {
           genres.push($(el).text().trim());
         });
 
@@ -440,11 +438,11 @@ export const getManhwaDetail = async (req, res) => {
     const html = await fetchPage(url);
     const $ = load(html);
 
-    const title = $(".judulseries").text().trim();
+    const title = $(".infox .title").text().trim();
     const alternative = $(".wd-full span").text().trim();
     const imageSrc = $(".thumb img").attr("src");
     const rating = $(".rating .num").text().trim();
-    const followedBy = $(".followers").text().trim();
+    const followedBy = $(".bmc").text().trim();
 
     const synopsis = $(".entry-content.entry-content-single").text().trim();
 
@@ -467,13 +465,13 @@ export const getManhwaDetail = async (req, res) => {
       .text()
       .trim();
 
-    const status = $(".series .status").text().replace(/Status:/i, "").trim();
-    const type = $(".series .type").text().replace(/Type:/i, "").trim();
-    const released = $(".series .released").text().replace(/Released:/i, "").trim();
-    const author = $(".series .author a").eq(0).find().text().trim();
-    const artist = $(".series .artist a").eq(0).find().text().trim();
-    const updatedOn = $(".series .update time").attr("datetime") || $(".series .update time").text().trim();
-
+    const status = $(".tsinfo .imptdt").eq(0).find("i").text().trim();
+    const type = $(".tsinfo .imptdt").eq(1).find("a").text().trim();
+    const released = $(".fmed").eq(0).find("span").text().trim();
+    const author = $(".fmed").eq(1).find("span").text().trim();
+    const artist = $(".fmed").eq(2).find("span").text().trim();
+    const updatedOn = $(".fmed").find("span time").text().trim();
+    
     const genres = [];
     $(".mgen a").each((index, element) => {
       const genreName = $(element).text().trim();
