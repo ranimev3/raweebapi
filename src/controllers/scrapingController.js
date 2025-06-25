@@ -98,7 +98,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://natsu.id/manga/?status=&type=manhwa&order=popular";
+    const url = "https://komiksin.net/manga/?status=&type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
@@ -433,7 +433,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://natsu.id/manga/${manhwaId}`;
+  const url = `https://komiksin.net/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
