@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://natsu.id/manga/?status=ongoing&type=manhua&order=update";
+    const url = "https://komiksin.net";
     const html = await fetchPage(url);
     const $ = load(html);
 
