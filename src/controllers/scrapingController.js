@@ -469,7 +469,7 @@ export const getManhwaDetail = async (req, res) => {
     const status = $(".tsinfo .imptdt").eq(0).find("i").text().trim();
     const type = $(".tsinfo .imptdt").eq(1).find("a").text().trim();
     const released = $(".fmed").eq(0).find("span").text().trim();
-    const author = $(".fmed").eq(1).find("span").text().trim();
+    const author = $(".seriescountent").eq(1).find("span").text().trim();
     const artist = $(".fmed").eq(2).find("span").text().trim();
     const updatedOn = $(".fmed").find("span time").text().trim();
     
