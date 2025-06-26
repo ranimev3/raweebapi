@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://natsu.id";
+    const url = "https://web.siikomik.org/";
     const html = await fetchPage(url);
     const $ = load(html);
 
