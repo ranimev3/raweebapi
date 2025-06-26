@@ -3,7 +3,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://natsu.id/";
+    const url = "https://kiryuu02.com/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -132,9 +132,9 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://natsu.id/manga/?page=2&type=manhwa&order=popular",
-      "https://natsu.id/manga/?page=1&type=manga&order=popular",
-      "https://natsu.id/manga/?page=3&type=manhua&order=popular",
+      "https://kiryuu02.com/manga/?page=2&type=manhwa&order=popular",
+      "https://kiryuu02.con/manga/?page=1&type=manga&order=popular",
+      "https://kiryuu02.com/manga/?page=3&type=manhua&order=popular",
     ];
 
     const allResults = [];
@@ -219,10 +219,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = [ 
-    "https://natsu.id/",
-    "https://kiryuu02.com/",
-  ];
+  const url = "https://kiryuu02.com/";
 
   try {
     const html = await fetchPage(url);
@@ -436,10 +433,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = [ 
-    `https://kiryuu02.com/manga/${manhwaId}`,
-    `https://natsu.id/manga/${manhwaId}`,
-  ];
+  const url = `https://kiryuu02.com/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -538,7 +532,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://natsu.id/manga/?status=ongoing&type=manhwa&order=";
+    "https://kiryuu02.com/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -572,10 +566,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = [
-    `https://kiryuu02.com/${chapterId}`,
-    `https://natsu.id/${chapterId}`
-  ];
+  const url = `https://kiryuu02.com/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
