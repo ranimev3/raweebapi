@@ -98,7 +98,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://komiksin.net/manga/?status=&type=manhwa&order=popular";
+    const url = "https://natsu.id/manga/?status=&type=manhwa&order=popular";
 
     const html = await fetchPage(url);
 
@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://web.siikomik.org/";
+    const url = "https://web.siikomik.org";
     const html = await fetchPage(url);
     const $ = load(html);
 
