@@ -393,7 +393,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://natsu.id/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://kiryuu02.com/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
