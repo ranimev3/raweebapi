@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://web.siikomik.org";
+    const url = "https://kiryuu02.com/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -355,7 +355,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://natsu.id/?s=${searchId}`;
+  const url = `https://kiryuu02.com/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -433,7 +433,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://natsu.id/manga/${manhwaId}`;
+  const url = `https://kiryuu02.com/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -566,7 +566,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://natsu.id/${chapterId}`;
+  const url = `https://kiryuu02.com/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
