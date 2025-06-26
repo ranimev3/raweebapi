@@ -3,7 +3,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/";
+    const url = "https://natsu.id/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -132,9 +132,9 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://kiryuu02.com/manga/?page=2&type=manhwa&order=popular",
-      "https://kiryuu02.con/manga/?page=1&type=manga&order=popular",
-      "https://kiryuu02.com/manga/?page=3&type=manhua&order=popular",
+      "https://natsu.id/manga/?page=2&type=manhwa&order=popular",
+      "https://natsu.id/manga/?page=1&type=manga&order=popular",
+      "https://natsu.id/manga/?page=3&type=manhua&order=popular",
     ];
 
     const allResults = [];
@@ -170,7 +170,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/";
+    const url = "https://natsu.id/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -219,7 +219,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://kiryuu02.com/";
+  const url = "https://natsu.id/manga/?order=popular/";
 
   try {
     const html = await fetchPage(url);
@@ -355,7 +355,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://kiryuu02.com/?s=${searchId}`;
+  const url = `https://natsu.id/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -393,7 +393,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://kiryuu02.com/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://natsu.id/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -433,7 +433,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://kiryuu02.com/manga/${manhwaId}`;
+  const url = `https://natsu.id/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -468,13 +468,13 @@ export const getManhwaDetail = async (req, res) => {
 
     const status = $(".tsinfo .imptdt").eq(0).find("i").text().trim();
     const type = $(".tsinfo .imptdt").eq(1).find("a").text().trim();
-    const released = $(".fmed").eq(0).find("span").text().trim();
-    const author = $(".seriescountent").eq(1).find("span").text().trim();
-    const artist = $(".fmed").eq(2).find("span").text().trim();
-    const updatedOn = $(".fmed").find("span time").text().trim();
+    const released = $(".fmdt").eq(0).find("span").text().trim();
+    const author = $(".fmdt").eq(1).find("span").text().trim();
+    const artist = $(".fmdt").eq(2).find("span").text().trim();
+    const updatedOn = $(".fmdt").find("span time").text().trim();
     
     const genres = [];
-    $(".seriestugenres").each((index, element) => {
+    $(".mgen a").each((index, element) => {
       const genreName = $(element).text().trim();
       const genreLink = $(element).attr("href");
       genres.push({
@@ -532,7 +532,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://kiryuu02.com/manga/?status=ongoing&type=manhwa&order=";
+    "https://natsu.id/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -566,7 +566,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://kiryuu02.com/${chapterId}`;
+  const url = `https://natsu.id/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
