@@ -221,7 +221,7 @@ export const getManhwaNew = async (req, res) => {
 export const getManhwaTop = async (req, res) => {
   const url = [ 
     "https://natsu.id/",
-    "https://kiryuu02.com/"
+    "https://kiryuu02.com/",
   ];
 
   try {
@@ -438,7 +438,7 @@ export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
   const url = [ 
     `https://kiryuu02.com/manga/${manhwaId}`,
-    `https://natsu.id/manga/${manhwaId}`
+    `https://natsu.id/manga/${manhwaId}`,
   ];
 
   try {
