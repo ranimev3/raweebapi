@@ -219,7 +219,10 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://natsu.id/";
+  const url = [ 
+    "https://natsu.id/",
+    "https://kiryuu02.com/"
+  ];
 
   try {
     const html = await fetchPage(url);
@@ -433,7 +436,10 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://kiryuu02.com/manga/${manhwaId}`;
+  const url = [ 
+    `https://kiryuu02.com/manga/${manhwaId}`,
+    `https://natsu.id/manga/${manhwaId}`
+  ];
 
   try {
     const html = await fetchPage(url);
@@ -566,7 +572,10 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://kiryuu02.com/${chapterId}`;
+  const url = [
+    `https://kiryuu02.com/${chapterId}`,
+    `https://natsu.id/${chapterId}`
+  ];
 
   try {
     const html = await fetchPage(url);
