@@ -219,7 +219,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://kiryuu02.com/";
+  const url = "https://kiryuu02.com";
 
   try {
     const html = await fetchPage(url);
