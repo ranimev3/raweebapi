@@ -3,11 +3,14 @@
 Rest API Manhwa Bahasa Indonesia
 
 ## Source
-https://manhwaindo.com/
-https://bacakomik.my/
+[Kiryuu02]("https://kiryuu02.com/")
+[bacakomik]("https://bacakomik.my/")
 
 ## LN source
-https://bacalightnovel.co/
+[Light Novel]("https://bacalightnovel.co/')
+
+## Demo
+![Live Demo]("https://raweeb.vercel.app")
 
 ## Fitur
 
