@@ -471,7 +471,7 @@ export const getManhwaDetail = async (req, res) => {
     const released = $(".imptdt").eq(0).find("span").text().trim();
     const author = $(".imptdt").eq(1).find("span").text().trim();
     const artist = $(".author vcard").eq(2).find("span").text().trim();
-    const updatedOn = $(".datePublished").find("span time").text().trim();
+    const updatedOn = $(".info-left .tsinfo .imptdt").eq(4).text().trim().replace('Posted On ', '');
     
     const genres = [];
     $(".seriestugenre a").each((index, element) => {
