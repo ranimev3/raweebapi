@@ -474,7 +474,7 @@ export const getManhwaDetail = async (req, res) => {
     const updatedOn = $(".imptdt").find("span time").text().trim();
     
     const genres = [];
-    $(".seriestugenre").each((index, element) => {
+    $(".seriestugenre a").each((index, element) => {
       const genreName = $(element).text().trim();
       const genreLink = $(element).attr("href");
       genres.push({
