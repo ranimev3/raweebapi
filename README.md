@@ -1,4 +1,4 @@
-![Preview](panel.webp)
+![Preview](raweeb.png)
 # Raweeb API
 Rest API Manhwa Bahasa Indonesia
 
@@ -78,7 +78,7 @@ npm start
 ## Routes
 URL Utama API:
 
-https://kurokami.vercel.app/api/$endpoint
+https://raweebapi.vercel.app/api/$endpoint
 
 Ganti `$endpoint` dengan list endpoint ini.
 
@@ -90,7 +90,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa terbaru.
   
   **Example:**  
-  `https://kurokami.vercel.app/api/manhwa-new`
+  `https://raweebapi.vercel.app/api/manhwa-new`
 
 ### 2. Manhwa Populer
 - **GET** `/manhwa-popular`
@@ -98,7 +98,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa populer
 
   **Example:**  
-  `https://kurokami.vercel.app/api/manhwa-popular`
+  `https://raweebapi.vercel.app/api/manhwa-popular`
   
 ### 3. Manhwa Top
 - **GET** `/manhwa-top`
