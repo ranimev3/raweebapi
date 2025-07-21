@@ -7,7 +7,7 @@ Rest API Manhwa Bahasa Indonesia
 [bacakomik]("https://bacakomik.my/")
 
 ## LN source
-[Light Novel]("https://bacalightnovel.co/')
+[Light Novel]("https://bacalightnovel.co/")
 
 ## Demo
 ![Live Demo]("https://raweeb.vercel.app")
