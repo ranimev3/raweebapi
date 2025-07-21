@@ -1,6 +1,12 @@
 import express from "express";
 import {
   getHome,
+  scrapeMainPage,
+  scrapeOngoingPage,
+  scrapeEndpoint,
+  scrapeCompletedPage,
+  scrapeSeries,
+  scrapeGenres,
   getManhwaPopular,
   getManhwaRecommendation,
   getManhwaNew,
@@ -19,6 +25,12 @@ import {
 const router = express.Router();
 
 router.get("/home", getHome);
+router.get("/anichin/home", scrapeMainPage);
+router.get("/anichin/ongoing", scrapeOngoingPage);
+router.get("/anichin/episode", scrapeEndpoint);
+router.get("/anichin/completed", scrapeCompletedPage);
+router.get("/anichin/seri", scrapeSeries);
+router.get("/anichin/genres", scrapeGenres);
 router.get("/manhwa-popular", getManhwaPopular);
 router.get("/manhwa-recommendation", getManhwaRecommendation);
 router.get("/manhwa-new", getManhwaNew);
