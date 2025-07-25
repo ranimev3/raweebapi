@@ -4,6 +4,7 @@ Rest API Manhwa Bahasa Indonesia
 
 ## Source
 ![Kiryuu02]("https://kiryuu02.com/")
+![komikstation]("https://komikstation.org")
 ![bacakomik]("https://bacakomik.my/")
 
 ## LN source
@@ -38,10 +39,10 @@ Rest API Manhwa Bahasa Indonesia
 ## Installasi
 ```bash
 # Clone repositori
-git clone https://github.com/Gungcakra/kurokami-manhwa-api.git
+git clone https://github.com/ranimev3/raweebapi/
 
 # Masuk ke folder proyek
-cd kurokami-manhwa-api
+cd raweebapi
 
 # Install dependensi
 npm install
@@ -109,7 +110,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa top
 
   **Example:**  
-  `https://kurokami.vercel.app/api/manhwa-top`
+  `https://raweebapi.vercel.app/api/manhwa-top`
   
 ### 4. Manhwa Ongoing
 - **GET** `/manhwa-ongoing`
@@ -117,7 +118,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa ongoing
 
   **Example:**  
-  `https://kurokami.vercel.app/api/manhwa-ongoing`
+  `https://raweebapi.vercel.app/api/manhwa-ongoing`
   
 ### 5. Manhwa Rekomendasi
 - **GET** `/manhwa-recommendation`
@@ -125,7 +126,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa rekomendasi
 
   **Example:**  
-  `https://kurokami.vercel.app/api/manhwa-recommendation`
+  `https://raweebapi.vercel.app/api/manhwa-recommendation`
 
   
 ### 6. Manhwa Details
@@ -134,7 +135,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get detail manhwa sesuai  `manhwaId`.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/manhwa-detail/nano-machine`
+  `https://raweebapi.vercel.app/api/manhwa-detail/nano-machine`
   
 
 ### 7. Chapter Details
@@ -143,7 +144,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get detail chapter manhwa sesuai  `chapterId`
 
   **Example:**  
-  `https://kurokami.vercel.app/api/chapter/nano-machine-chapter-1`
+  `https://raweebapi.vercel.app/api/chapter/nano-machine-chapter-1`
   
 
 ### 8. Genre List
@@ -152,7 +153,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list genre.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/genres`
+  `https://raweebapi.vercel.app/api/genres`
 
 
 ### 9. Manhwa by Genre 
@@ -161,7 +162,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa sesuai genre.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/genre/action`
+  `https://raweebapi.vercel.app/api/genre/action`
 
 
   ### 10. Manhwa by Genre with Page
@@ -170,7 +171,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa sesuai genre dan page.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/genre/action/page/2`
+  `https://raweebapi.vercel.app/api/genre/action/page/2`
 
 
 ### 11. Manhwa Search
@@ -179,7 +180,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa sesuai searchQuery.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/search/nano%20machine`
+  `https://raweebapi.vercel.app/api/search/nano%20machine`
 
   
 ### 12. Manhwa Search with Page
@@ -188,7 +189,7 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get list manhwa sesuai searchQuery dan page.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/search/nano%20machine/page/2`
+  `https://raweebapi.vercel.app/api/search/nano%20machine/page/2`
   
 ### 13. A-Z List Manhwa
 - **GET** `/list`
@@ -196,4 +197,4 @@ Ganti `$endpoint` dengan list endpoint ini.
   Get A-Z list manhwa.
 
   **Example:**  
-  `https://kurokami.vercel.app/api/list`
+  `https://raweebapi.vercel.app/api/list`
