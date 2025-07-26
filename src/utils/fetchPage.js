@@ -11,10 +11,11 @@ const getRandomUserAgent = () => {
   return userAgents[Math.floor(Math.random() * userAgents.length)];
 };
 
+
 const API_URL_Origin:
   "https://komikstation.org", 
   "https://kiryuu02.com",
-
+  
 const API_URL_Referer:
   "https://komikstation.org/",
   "https://kiryuu02.com/",
@@ -24,8 +25,8 @@ const headers = {
   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
   "Accept-Encoding": "gzip, deflate, br",
   "Accept-Language": "en-US,en;q=0.9,id;q=0.8",
-  "Referer": ${API_URL_Referer},
-  "Origin": ${API_URL_Origin},
+  "Referer": API_URL_Referer,
+  "Origin": API_URL_Origin,
   "X-Requested-With": "XMLHttpRequest",  
   "Upgrade-Insecure-Requests": "1",  
 };
