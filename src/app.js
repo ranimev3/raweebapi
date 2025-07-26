@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 
 // API routes
 app.use('/api', apiRoutes);
-app.use('/api/komikstation', apiKomikstation);
+app.use('/komikstation', apiKomikstation);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
