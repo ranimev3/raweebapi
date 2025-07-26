@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import apiRoutes from './routes/apiRoutes.js';
-import apiKomikstation from './komikstation/routes/apiRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,7 +26,7 @@ app.use((req, res, next) => {
 
 // API routes
 app.use('/api', apiRoutes);
-app.use('/komikstation', apiKomikstation);
+
 
 // Health check endpoint
 app.get('/health', (req, res) => {
