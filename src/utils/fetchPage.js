@@ -25,9 +25,9 @@ const DOMAIN_CONFIG = {
     origin: 'https://kiryuu02.com',
     referer: 'https://kiryuu02.com/'
   },
-  'natsu.id': {
-    origin: 'https://natsu.id',
-    referer: 'https://natsu.id/'
+  'default': {
+    origin: 'https://google.com',
+    referer: 'https://google.com/'
   }
 };
 
