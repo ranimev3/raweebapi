@@ -467,12 +467,12 @@ export const getManhwaDetail = async (req, res) => {
       .text()
       .trim();
 
-    const status = $(".info .imptdt").eq(0).find("i").text().trim();
-    const type = $(".info .imptdt").eq(1).find("a").text().trim();
-    const released = $(".imptdt").eq(0).find("span").text().trim();
-    const author = $(".imptdt").eq(1).find("span").text().trim();
-    const artist = $(".author vcard").eq(2).find("span").text().trim();
-    const updatedOn = $(".info-left .tsinfo .imptdt").eq(4).text().trim().replace('Posted On ', '');
+    const status = $("table.infotable tr").eq(0).find('td').eq(1).text().trim();
+    const type = $("table.infotable tr").eq(1).find('td').eq(1).text().trim();
+    const released = $("table.infotable tr").eq(2).find('td').eq(1).text().trim();
+    const author = $("table.infotable tr").eq(3).find('td').eq(1).text().trim();
+    const artist = $("table.infotable tr").eq(4).find('td').eq(1).text().trim();
+    const updatedOn = $("table.infotable tr").eq(7).find('time').text().trim();
     
     const genres = [];
     $(".seriestugenre a").each((index, element) => {
