@@ -6,7 +6,7 @@ import {
   getManhwaNew,
   getManhwaTop,
   getGenres,
-  getManhwaOnGoingv2,
+  getChapterv2,
   getGenreId,
   getGenreIdPage,
   getSearch,
@@ -25,7 +25,7 @@ router.get("/manhwa-popular", getManhwaPopular);
 router.get("/manhwa-recommendation", getManhwaRecommendation);
 router.get("/manhwa-new", getManhwaNew);
 router.get("/manhwa-top", getManhwaTop);
-router.get("/manhwa-su", getManhwaOnGoingv2);
+router.get("/komikstation/chapter/:chapterId", getChapterv2);
 router.get("/genres", getGenres);
 router.get("/genre/:genreId", getGenreId);
 router.get("/genre/:genreId/page/:pageNumber", getGenreIdPage);
