@@ -6,7 +6,6 @@ import {
   getManhwaNew,
   getManhwaTop,
   getGenres,
-  getChapterv2,
   getGenreId,
   getGenreIdPage,
   getSearch,
@@ -14,7 +13,18 @@ import {
   getManhwaDetail,
   getManhwaOnGoing,
   getChapter,
-  getListv2,
+  scrapeLatest,
+  scrapePopuler,
+  scrapeRecomen,
+  scrapeOnly,
+  scrapeTop,
+  scrapeList,
+  scrapeSearch,
+  scrapeGenres,
+  scrapeGenre,
+  scrapeDetail,
+  scrapeChapter,
+  scrapeNews,
   getList
 } from "../controllers/scrapingController.js";
 
@@ -36,5 +46,7 @@ router.get("/manhwa-ongoing", getManhwaOnGoing);
 router.get("/chapter/:chapterId", getChapter); 
 router.get("/listv2", getListv2);
 router.get("/list", getList);
+router.get("/only", scrapeOnly);
+router.get("/news", scrapeNews);
 
 export default router;
