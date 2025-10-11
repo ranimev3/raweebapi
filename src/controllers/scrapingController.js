@@ -1,7 +1,6 @@
 // Subscribe my channel
 import { load } from "cheerio";
 import { fetchPage } from "../utils/fetchPage.js";
-import { Fetchpage } from "../utils/Fetchpage.js";
 
 export const getHome = async (req, res) => {
   try {
