@@ -31,8 +31,7 @@ router.get("/search/:searchId", getSearch);
 router.get("/search/:searchId/page/:pageNumber", getSearchPage);
 router.get("/manhwa-detail/:manhwaId", getManhwaDetail);
 router.get("/manhwa-ongoing", getManhwaOnGoing);
-router.get("/chapter/:chapterId", getChapter); 
-router.get("/listv2", getListv2);
+router.get("/chapter/:chapterId", getChapter);
 router.get("/list", getList);
 
 export default router;
