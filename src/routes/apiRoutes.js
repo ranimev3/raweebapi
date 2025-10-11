@@ -13,29 +13,17 @@ import {
   getManhwaDetail,
   getManhwaOnGoing,
   getChapter,
-  scrapeLatest,
-  scrapePopuler,
-  scrapeRecomen,
-  scrapeOnly,
-  scrapeTop,
-  scrapeList,
-  scrapeSearch,
-  scrapeGenres,
-  scrapeGenre,
-  scrapeDetail,
-  scrapeChapter,
-  scrapeNews,
   getList
 } from "../controllers/scrapingController.js";
 
 
 const router = express.Router();
+
 router.get("/home", getHome);
 router.get("/manhwa-popular", getManhwaPopular);
 router.get("/manhwa-recommendation", getManhwaRecommendation);
 router.get("/manhwa-new", getManhwaNew);
 router.get("/manhwa-top", getManhwaTop);
-router.get("/bacakomik/chapter/:chapterId", scrapeChapter);
 router.get("/genres", getGenres);
 router.get("/genre/:genreId", getGenreId);
 router.get("/genre/:genreId/page/:pageNumber", getGenreIdPage);
