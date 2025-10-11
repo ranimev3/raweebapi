@@ -1222,7 +1222,7 @@ export const getManhwaOnGoingv2 = async (req, res) => {
 
 export const getChapterv2 = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://komikstation.org/${chapterId}`;
+  const url = `https://komiku.cc/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
