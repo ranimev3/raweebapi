@@ -11,7 +11,7 @@ Rest API Manhwa Bahasa Indonesia
 ![Light Novel]("https://bacalightnovel.co/")
 
 ## Demo
-![Live Demo]("https://raweeb.vercel.app")
+![Live Demo]("https://raweeb.space")
 
 ## Fitur
 
@@ -56,21 +56,21 @@ npm start
 ```json
 {
     "title": "Return of The Greatest Lancer",
-    "link": "https://komikstation.co/manga/return-of-the-greatest-lancer/",
-    "imageSrc": "https://i0.wp.com/komikstation.co/wp-content/uploads/2021/09/Return-of-The-Greatest-Lancer-1.jpg?resize=100,130",
+    "link": "https://komikstation.org/manga/return-of-the-greatest-lancer/",
+    "imageSrc": "https://i0.wp.com/komikstation.org/wp-content/uploads/2021/09/Return-of-The-Greatest-Lancer-1.jpg?resize=100,130",
     "chapters": [
         {
-            "chapterLink": "https://komikstation.co/return-of-the-greatest-lancer-chapter-151/",
+            "chapterLink": "https://komikstation.org/return-of-the-greatest-lancer-chapter-151/",
             "chapterTitle": "Ch.151",
             "timeAgo": "3 jam lalu"
         },
         {
-            "chapterLink": "https://komikstation.co/return-of-the-greatest-lancer-chapter-150/",
+            "chapterLink": "https://komikstation.org/return-of-the-greatest-lancer-chapter-150/",
             "chapterTitle": "Ch.150",
             "timeAgo": "1 minggu lalu"
         },
         {
-            "chapterLink": "https://komikstation.co/return-of-the-greatest-lancer-chapter-149/",
+            "chapterLink": "https://komikstation.org/return-of-the-greatest-lancer-chapter-149/",
             "chapterTitle": "Ch.149",
             "timeAgo": "2 minggu lalu"
         }
@@ -82,7 +82,7 @@ npm start
 ## Routes
 URL Utama API:
 
-https://raweebapi.vercel.app/api/$endpoint
+https://raweebapi.vercel.app/api/
 
 Ganti `$endpoint` dengan list endpoint ini.
 
