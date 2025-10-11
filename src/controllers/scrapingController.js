@@ -1089,7 +1089,7 @@ export const getSearchPagev2 = async (req, res) => {
 
 export const getManhwaDetailv2 = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://komikstation.org/manga/${manhwaId}`;
+  const url = `https://manhwaindo.app/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -1222,7 +1222,7 @@ export const getManhwaOnGoingv2 = async (req, res) => {
 
 export const getChapterv2 = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://komiku.cc/${chapterId}`;
+  const url = `https://manhwaindo.app/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
@@ -1279,7 +1279,7 @@ export const getChapterv2 = async (req, res) => {
 };
 
 export const getListv2 = async (req, res) => {
-  const url = "https://komikstation.org/manga/list-mode/";
+  const url = "https://manhwaindo.app/manga/list-mode/";
 
   try {
     const html = await fetchPage(url);
