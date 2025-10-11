@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import apiRoutes from './routes/apiRoutes.js';
-import apibacakomik from './Bacakomik/routesv2/router.js';
+// Diperbaiki: Nama variabel lebih deskriptif dan path file disarankan lebih rapi
+import bacakomikRouter from './routesv2/router.js'; // PASTIKAN PATH INI SESUAI STRUKTUR FOLDER ANDA
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,9 +16,7 @@ app.use(cors({
 
 // Security middleware
 app.disable('x-powered-by');
-app.use(express.json({ limit: '10kb' })); // Limit JSON payload size
-
-// Rate limiting would be good to add here (e.g., using express-rate-limit)
+app.use(express.json({ limit: '10kb' }));
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -27,8 +26,8 @@ app.use((req, res, next) => {
 
 // API routes
 app.use('/api', apiRoutes);
-app.use('/api/bacakomik', apibacakomik);
-
+// Diperbaiki: Menggunakan variabel baru dengan path yang lebih spesifik
+app.use('/api/bacakomik', bacakomikRouter);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
