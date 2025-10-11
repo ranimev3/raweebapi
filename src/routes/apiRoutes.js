@@ -13,6 +13,7 @@ import {
   getManhwaDetail,
   getManhwaOnGoing,
   getChapter,
+  getListv2,
   getList
 } from "../controllers/scrapingController.js";
 
@@ -31,6 +32,7 @@ router.get("/search/:searchId/page/:pageNumber", getSearchPage);
 router.get("/manhwa-detail/:manhwaId", getManhwaDetail);
 router.get("/manhwa-ongoing", getManhwaOnGoing);
 router.get("/chapter/:chapterId", getChapter); 
+router.get("/listv2", getListv2);
 router.get("/list", getList);
 
 export default router;
