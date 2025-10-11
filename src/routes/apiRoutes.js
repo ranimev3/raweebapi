@@ -28,8 +28,8 @@ import {
   getList
 } from "../controllers/scrapingController.js";
 
-const router = express.Router();
 
+const router = express.Router();
 router.get("/home", getHome);
 router.get("/manhwa-popular", getManhwaPopular);
 router.get("/manhwa-recommendation", getManhwaRecommendation);
