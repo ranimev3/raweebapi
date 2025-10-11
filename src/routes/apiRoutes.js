@@ -35,7 +35,7 @@ router.get("/manhwa-popular", getManhwaPopular);
 router.get("/manhwa-recommendation", getManhwaRecommendation);
 router.get("/manhwa-new", getManhwaNew);
 router.get("/manhwa-top", getManhwaTop);
-router.get("/komikstation/chapter/:chapterId", getChapterv2);
+router.get("/bacakomik/chapter/:chapterId", scrapeChapter);
 router.get("/genres", getGenres);
 router.get("/genre/:genreId", getGenreId);
 router.get("/genre/:genreId/page/:pageNumber", getGenreIdPage);
@@ -46,7 +46,5 @@ router.get("/manhwa-ongoing", getManhwaOnGoing);
 router.get("/chapter/:chapterId", getChapter); 
 router.get("/listv2", getListv2);
 router.get("/list", getList);
-router.get("/only", scrapeOnly);
-router.get("/news", scrapeNews);
 
 export default router;
