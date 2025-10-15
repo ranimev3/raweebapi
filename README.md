@@ -2,13 +2,15 @@
 # Raweeb API
 Rest API Manhwa Bahasa Indonesia
 
-## Source
-![Kiryuu02]("https://kiryuu02.com/")
-![komikstation]("https://komikstation.org")
-![bacakomik]("https://bacakomik.my/")
+## Source URL raweeb api
+- **Kiryuu02**
+- **Natsu.id**
+- **Gojonime**
+- **Samehadaku**
+- **Bacalightnovel**
 
-## LN source
-![Light Novel]("https://bacalightnovel.co/")
+## support Raweeb Api
+- **Anime, Komik, Novel, Film ( cooming soon )
 
 ## Demo
 ![Live Demo]("https://raweeb.space")
