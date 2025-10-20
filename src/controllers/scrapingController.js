@@ -99,7 +99,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/manga/?status=&type=manhwa&order=popular";
+    const url = "https://kiryuu02.com/manga/?status=&type=manga&order=popular";
 
     const html = await fetchPage(url);
 
@@ -136,6 +136,7 @@ export const getManhwaRecommendation = async (req, res) => {
       "https://kiryuu02.com/manga/?page=1&type=manhwa&order=popular",
       "https://kiryuu02.com/manga/?page=1&type=manga&order=popular",
       "https://kiryuu02.com/manga/?page=1&type=manhua&order=popular",
+      "https://kiryuu02.com/manga/?status=&type=novel&order=update",
     ];
 
     const allResults = [];
