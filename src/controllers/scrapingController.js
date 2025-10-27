@@ -99,7 +99,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/manga/?status=&type=manga&order=popular";
+    const url = "https://manhwaindo.app/manga/?status=&type=manga&order=popular";
 
     const html = await fetchPage(url);
 
@@ -133,10 +133,10 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://kiryuu02.com/manga/?page=1&type=manhwa&order=popular",
-      "https://kiryuu02.com/manga/?page=1&type=manga&order=popular",
-      "https://kiryuu02.com/manga/?page=1&type=manhua&order=popular",
-      "https://kiryuu02.com/manga/?status=&type=novel&order=update",
+      "https://manhwaindo.app/manga/?page=1&type=manhwa&order=popular",
+      "https://manhwaindo.app/manga/?page=1&type=manga&order=popular",
+      "https://manhwaindo.app/manga/?page=1&type=manhua&order=popular",
+      "https://manhwaindo.app/manga/?status=&type=novel&order=update",
     ];
 
     const allResults = [];
@@ -172,7 +172,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/";
+    const url = "https://manhwaindo.app/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -221,7 +221,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://kiryuu02.com/";
+  const url = "https://manhwaindo.app/";
 
   try {
     const html = await fetchPage(url);
@@ -279,7 +279,7 @@ export const getGenres = async (req, res) => {
 
 export const getGenreId = async (req, res) => {
   const { genreId } = req.params;
-  const url = `https://kiryuu02.com/genres/${genreId}`;
+  const url = `https://manhwaindo.app/genres/${genreId}`;
 
   try {
     const html = await fetchPage(url);
@@ -317,7 +317,7 @@ export const getGenreId = async (req, res) => {
 
 export const getGenreIdPage = async (req, res) => {
   const { genreId, pageNumber } = req.params;
-  const url = `https://kiryuu02.com/genres/${genreId}/page/${pageNumber}`;
+  const url = `https://manhwaindo.app/genres/${genreId}/page/${pageNumber}`;
 
   try {
     const html = await fetchPage(url);
@@ -357,7 +357,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://komikstation.org/?s=${searchId}`;
+  const url = `https://manhwaindo.app/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -395,7 +395,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://kiryuu02.com/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://manhqaindo.app/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -435,7 +435,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://kiryuu02.com/manga/${manhwaId}`;
+  const url = `https://manhwaindo.app/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -534,7 +534,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://kiryuu02.com/manga/?status=ongoing&type=manhwa&order=";
+    "https://manhwaindo.app/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -568,7 +568,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://kiryuu02.com/${chapterId}`;
+  const url = `https://manhwaindo.app/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
