@@ -357,7 +357,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://kiryuu02.com/?s=${searchId}`;
+  const url = `https://komikstation.org/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
