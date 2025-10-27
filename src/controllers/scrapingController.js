@@ -99,7 +99,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://manhwaindo.app/manga/?status=&type=manga&order=popular";
+    const url = "https://manhwaindo.app/series/?status=&type=manga&order=popular";
 
     const html = await fetchPage(url);
 
@@ -255,7 +255,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://manhwaindo.app/manga/list-mode/";
+    const url = "https://manhwaindo.app/series/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -395,7 +395,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://manhqaindo.app/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://manhwaindo.app/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
