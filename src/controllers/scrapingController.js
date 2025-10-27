@@ -4,7 +4,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://kiryuu02.com/";
+    const url = "https://komikstation.org/";
     const html = await fetchPage(url);
     const $ = load(html);
 
