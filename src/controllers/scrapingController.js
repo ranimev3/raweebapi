@@ -468,15 +468,15 @@ export const getManhwaDetail = async (req, res) => {
       .text()
       .trim();
 
-    const status = $("table.infotable tr").eq(0).find('td').eq(1).text().trim();
-    const type = $("table.infotable tr").eq(1).find('td').eq(1).text().trim();
-    const released = $("table.infotable tr").eq(2).find('td').eq(1).text().trim();
-    const author = $("table.infotable tr").eq(3).find('td').eq(1).text().trim();
-    const artist = $("table.infotable tr").eq(4).find('td').eq(1).text().trim();
-    const updatedOn = $("table.infotable tr").eq(7).find('time').text().trim();
+    const status = $(".imptdt").eq().find('').eq().text().trim();
+    const type = $(".imptdt").eq().find('').eq().text().trim();
+    const released = $(".imptdt").eq().find('').eq().text().trim();
+    const author = $(".imptdt").eq().find('').eq().text().trim();
+    const artist = $(".imptdt").eq().find('').eq1).text().trim();
+    const updatedOn = $(".imptdt").eq().find('').text().trim();
     
     const genres = [];
-    $(".seriestugenre a").each((index, element) => {
+    $(".mgen a").each((index, element) => {
       const genreName = $(element).text().trim();
       const genreLink = $(element).attr("href");
       genres.push({
@@ -625,7 +625,7 @@ export const getChapter = async (req, res) => {
 };
 
 export const getList = async (req, res) => {
-  const url = "https://kiryuu02.com/manga/list-mode/";
+  const url = "https://manhwaindo.app/series/list-mode/";
 
   try {
     const html = await fetchPage(url);
