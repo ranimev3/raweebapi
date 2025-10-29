@@ -1,8 +1,6 @@
 // Subscribe my channel
 import { load } from "cheerio";
 import { fetchPage } from "../utils/fetchPage.js";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const getHome = async (req, res) => {
   try {
