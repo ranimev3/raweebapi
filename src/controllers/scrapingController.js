@@ -221,7 +221,7 @@ export const getManhwaNew = async (req, res) => {
 };
 
 export const getManhwaTop = async (req, res) => {
-  const url = "https://manhwaindo.app/";
+  const url = "https://mangakita.id/";
 
   try {
     const html = await fetchPage(url);
