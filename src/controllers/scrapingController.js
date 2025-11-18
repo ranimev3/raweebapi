@@ -4,7 +4,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://themanga.my.id/";
+    const url = "https://manhwaindo.app/";
     const html = await fetchPage(url);
     const $ = load(html);
 
