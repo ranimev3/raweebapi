@@ -468,8 +468,8 @@ export const getManhwaDetail = async (req, res) => {
       .text()
       .trim();
 
-    const status = $('.imptdt').eq(0).find('i').text().trim();
-    const type = $('.imptdt').eq(1).find('a').text().trim();
+    const status = $('.imptdt').eq().find('i').text().trim();
+    const type = $('.imptdt').eq().find('a').text().trim();
     const released = $('.imptdt').eq(2).find('a').text().trim();
     const author = $('.imptdt').eq(1).find('i').text().trim();
     const artist = $('.imptdt').eq(2).find('i').text().trim();
