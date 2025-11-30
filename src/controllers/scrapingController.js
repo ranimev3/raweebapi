@@ -12,7 +12,7 @@ export const getHome = async (req, res) => {
     $(".utao").each((index, element) => {
       const title = $(element).find(".luf h3").text().trim();
       const link = $(element).find(".luf a.series").attr("href");
-      const imageSrc = $(element).find(".imgu img").attr("src");
+      const imageSrc = $(element).find(".img").attr("src");
       const chapters = [];
 
       $(element)
@@ -568,7 +568,7 @@ export const getManhwaOnGoing = async (req, res) => {
 
 export const getChapter = async (req, res) => {
   const { chapterId } = req.params;
-  const url = `https://manhwaindo.app/${chapterId}`;
+  const url = `https://mangakita.id/${chapterId}`;
 
   try {
     const html = await fetchPage(url);
