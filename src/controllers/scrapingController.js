@@ -99,7 +99,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://manhwaindo.app/series/?status=&type=manga&order=popular";
+    const url = "https://mangakita.id/series/?status=&type=manga&order=popular";
 
     const html = await fetchPage(url);
 
@@ -133,10 +133,10 @@ export const getManhwaPopular = async (req, res) => {
 export const getManhwaRecommendation = async (req, res) => {
   try {
     const urls = [
-      "https://manhwaindo.app/series/?page=1&type=manhwa&order=popular",
-      "https://manhwaindo.app/series/?page=1&type=manga&order=popular",
-      "https://manhwaindo.app/series/?page=1&type=manhua&order=popular",
-      "https://manhwaindo.app/series/?status=&type=novel&order=update",
+      "https://mangakita.id/manga/?page=1&type=manhwa&order=popular",
+      "https://mangakita.id/manga/?page=1&type=manga&order=popular",
+      "https://mangakita.id/manga/?page=1&type=manhua&order=popular",
+      "https://mangakita.id/manga/?status=&type=novel&order=update",
     ];
 
     const allResults = [];
@@ -172,7 +172,7 @@ export const getManhwaRecommendation = async (req, res) => {
 
 export const getManhwaNew = async (req, res) => {
   try {
-    const url = "https://manhwaindo.app/";
+    const url = "https://mangakita.id/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -255,7 +255,7 @@ export const getManhwaTop = async (req, res) => {
 
 export const getGenres = async (req, res) => {
   try {
-    const url = "https://manhwaindo.app/series/list-mode/";
+    const url = "https://mangakita.id/manga/list-mode/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -279,7 +279,7 @@ export const getGenres = async (req, res) => {
 
 export const getGenreId = async (req, res) => {
   const { genreId } = req.params;
-  const url = `https://manhwaindo.app/genres/${genreId}`;
+  const url = `https://mangakita.id/genres/${genreId}`;
 
   try {
     const html = await fetchPage(url);
@@ -317,7 +317,7 @@ export const getGenreId = async (req, res) => {
 
 export const getGenreIdPage = async (req, res) => {
   const { genreId, pageNumber } = req.params;
-  const url = `https://manhwaindo.app/genres/${genreId}/page/${pageNumber}`;
+  const url = `https://mangakita.id/genres/${genreId}/page/${pageNumber}`;
 
   try {
     const html = await fetchPage(url);
@@ -357,7 +357,7 @@ export const getGenreIdPage = async (req, res) => {
 
 export const getSearch = async (req, res) => {
   const { searchId } = req.params;
-  const url = `https://manhwaindo.app/?s=${searchId}`;
+  const url = `https://mangakita.id/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -395,7 +395,7 @@ export const getSearch = async (req, res) => {
 
 export const getSearchPage = async (req, res) => {
   const { searchId, pageNumber } = req.params;
-  const url = `https://manhwaindo.app/page/${pageNumber}/?s=${searchId}`;
+  const url = `https://mangakita.id/page/${pageNumber}/?s=${searchId}`;
 
   try {
     const html = await fetchPage(url);
@@ -435,7 +435,7 @@ export const getSearchPage = async (req, res) => {
 
 export const getManhwaDetail = async (req, res) => {
   const manhwaId = req.params.manhwaId;
-  const url = `https://manhwaindo.app/series/${manhwaId}`;
+  const url = `https://mangakita.id/manga/${manhwaId}`;
 
   try {
     const html = await fetchPage(url);
@@ -534,7 +534,7 @@ export const getManhwaDetail = async (req, res) => {
 
 export const getManhwaOnGoing = async (req, res) => {
   const url =
-    "https://manhwaindo.app/series/?status=ongoing&type=manhwa&order=";
+    "https://mangakita.id/manga/?status=ongoing&type=manhwa&order=";
   try {
     const html = await fetchPage(url);
     const $ = load(html);
@@ -625,7 +625,7 @@ export const getChapter = async (req, res) => {
 };
 
 export const getList = async (req, res) => {
-  const url = "https://manhwaindo.app/series/list-mode/";
+  const url = "https://mangakita.id/manga/list-mode/";
 
   try {
     const html = await fetchPage(url);
