@@ -4,7 +4,7 @@ import { fetchPage } from "../utils/fetchPage.js";
 
 export const getHome = async (req, res) => {
   try {
-    const url = "https://manhwaindo.app/";
+    const url = "https://mangakita.id/";
     const html = await fetchPage(url);
     const $ = load(html);
 
@@ -12,7 +12,7 @@ export const getHome = async (req, res) => {
     $(".utao").each((index, element) => {
       const title = $(element).find(".luf h3").text().trim();
       const link = $(element).find(".luf a.series").attr("href");
-      const imageSrc = $(element).find(".img").attr("src");
+      const imageSrc = $(element).find(".imgu img").attr("src");
       const chapters = [];
 
       $(element)
@@ -181,7 +181,7 @@ export const getManhwaNew = async (req, res) => {
     $(".utao").each((index, element) => {
       const title = $(element).find(".luf h4").text().trim();
       const link = $(element).find(".luf a.series").attr("href");
-      const imageSrc = $(element).find(".imgu img").attr("src");
+      const imageSrc = $(element).find("img").attr("src");
       const chapters = [];
 
       const mangaList = $(element).find(".luf ul.Manga li");
