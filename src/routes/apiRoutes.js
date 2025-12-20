@@ -13,13 +13,7 @@ import {
   getManhwaDetail,
   getManhwaOnGoing,
   getChapter,
-  getList,
-  scrapeMainPage,
-  scrapeOngoingPage,
-  scrapeEndpoint,
-  scrapeGenres,
-  scrapeCompletedPage,
-  scrapeSeries
+  getList
 } from "../controllers/scrapingController.js";
 
 
@@ -39,6 +33,5 @@ router.get("/manhwa-detail/:manhwaId", getManhwaDetail);
 router.get("/manhwa-ongoing", getManhwaOnGoing);
 router.get("/chapter/:chapterId", getChapter);
 router.get("/list", getList);
-router.get("/donghua/genres", scrapeGenres);
 
 export default router;
