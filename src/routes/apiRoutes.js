@@ -39,6 +39,6 @@ router.get("/manhwa-detail/:manhwaId", getManhwaDetail);
 router.get("/manhwa-ongoing", getManhwaOnGoing);
 router.get("/chapter/:chapterId", getChapter);
 router.get("/list", getList);
-router.get("/donghua/home", scrapeMainPage);
+router.get("/donghua/genres", scrapeGenres);
 
 export default router;
