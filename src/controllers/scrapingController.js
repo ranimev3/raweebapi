@@ -99,7 +99,7 @@ export const getHome = async (req, res) => {
 
 export const getManhwaPopular = async (req, res) => {
   try {
-    const url = "https://mangakita.id/series/?status=&type=manga&order=popular";
+    const url = "https://mangakita.id/manga/?status=&type=manga&order=popular";
 
     const html = await fetchPage(url);
 
