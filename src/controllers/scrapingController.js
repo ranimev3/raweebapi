@@ -654,7 +654,3 @@ export const getList = async (req, res) => {
     res.status(500).json({ error: "Failed to fetch data" });
   }
 };
-    console.error(`Error scraping the endpoint ${endpoint}:`, error);
-    return { title: 'Error', releasedOn: 'Error', video: 'Error', episodes: [], details: {} };
-  }
-}
